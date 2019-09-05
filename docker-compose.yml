@@ -23,6 +23,8 @@ services:
       - node_modules:/src/app/server/static/node_modules
     command: ["/src/tools/dev-webpack.sh"]
     environment:
+      HOT_RELOAD: "0"
+      DEBUG: "False"
       WEBPACK_HOST: "0.0.0.0"
       WEBPACK_PORT: "8080"
       WEBPACK_POLL_MILLIS: "1000"
