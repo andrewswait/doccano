@@ -35,9 +35,12 @@ services:
       POSTGRES_USER: "doccano"
       POSTGRES_PASSWORD: "doccano"
       POSTGRES_DB: "doccano"
+    volumes:
+      - postgres:/var/lib/postgresql/data
     ports:
       - 5432:5432
 
 volumes:
   node_modules:
   venv:
+  postgres:
