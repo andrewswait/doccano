@@ -182,6 +182,7 @@ class Label(models.Model):
 
 
 class Document(models.Model):
+    filename = models.CharField(max_length=255, default="")
     text = models.TextField()
     project = models.ForeignKey(Project, related_name='documents', on_delete=models.CASCADE)
     meta = models.TextField(default='{}')
