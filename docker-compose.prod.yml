@@ -1,0 +1,12 @@
+version: "3"
+services:
+
+  django:
+    environment:
+      DEBUG: "True"
+
+  webpack:
+    command: ["/src/tools/prod-webpack.sh"]
+    environment:
+      DEBUG: "False"
+
