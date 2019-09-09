@@ -146,12 +146,12 @@ body {
 }
 
 .content {
-  font-size: 16pt;
-  line-height: 250%;
+  font-size: 14pt;
+  line-height: 110%;
 }
 
 .content .tag {
-  font-size: 16pt;
+  font-size: 14pt;
   height: 1.5em;
   padding-left: .5em;
   padding-right: .5em;
@@ -296,3 +296,4 @@ body {
 }
 
 [v-cloak] { display: none; }
+

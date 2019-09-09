@@ -11,12 +11,12 @@
           div.columns.is-multiline
             div.column.is-12
               div.tags.has-addons.mb0
-                span.tag.is-medium(v-bind:style="{ \
+                span.tag.is-small(v-bind:style="{ \
                   color: newLabel.text_color, \
                   backgroundColor: newLabel.background_color \
                 }") {{ newLabel.text }}
 
-                span.tag.is-medium
+                span.tag.is-small
                   kbd {{ shortcutKey(newLabel) | simpleShortcut }}
 
             div.column
@@ -92,13 +92,15 @@
             div.level-left
               div.level-item
                 p.subtitle.is-5
-                  div.tags.has-addons.mb0
-                    span.tag.is-medium(v-bind:style="{ \
+                  div.tags.has-addons.mb0(
+                      style="font-size: 14px;"
+                    )
+                    span.tag.is-small(v-bind:style="{ \
                       color: label.text_color, \
                       backgroundColor: label.background_color \
                     }") {{ label.text }}
 
-                    span.tag.is-medium
+                    span.tag.is-small
                       kbd {{ shortcutKey(label) | simpleShortcut }}
 
             div.level-right

@@ -8,16 +8,17 @@ block annotation-area
         div.field.is-grouped.is-grouped-multiline
           div.control(v-for="label in labels")
             div.tags.has-addons
-              a.tag.is-medium(
+              a.tag.is-small(
                 v-shortkey.once="replaceNull(shortcutKey(label))"
                 v-bind:style="{ \
                   color: label.text_color, \
                   backgroundColor: label.background_color \
                 }"
+                style={"border": "white solid thin"},
                 v-on:click="annotate(label.id)"
                 v-on:shortkey="annotate(label.id)"
               ) {{ label.text }}
-              span.tag.is-medium
+              span.tag.is-small
                 kbd {{ shortcutKey(label) | simpleShortcut }}
 
     div.card-content
